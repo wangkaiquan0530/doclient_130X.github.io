@@ -1,0 +1,981 @@
+2022年 11月 14日 星期一 16:02:17 CST start
+分词检查包括分词格式检查、命令词多输出、命令词垃圾词混用和命令词回溯
+分词格式检查中有ERROR时，请修改，否则无法正常生成语言模型
+一、分词格式检查
+line 2 :NOTICE  <col3 cmmand word is different with col4>
+line 2 :ERROR   <col3 想优 is not in dictionary>
+line 4 :NOTICE  <col3 cmmand word is different with col4>
+line 4 :ERROR   <col3 想优 is not in dictionary>
+line 7 :NOTICE  <col3 cmmand word is different with col4>
+line 9 :NOTICE  <col3 cmmand word is different with col4>
+line 10 :NOTICE  <col3 cmmand word is different with col4>
+line 10 :ERROR   <col3 关逼 is not in dictionary>
+line 12 :NOTICE  <col3 cmmand word is different with col4>
+line 13 :NOTICE  <col3 cmmand word is different with col4>
+line 20 :NOTICE  <col3 cmmand word is different with col4>
+line 24 :NOTICE  <col3 cmmand word is different with col4>
+line 25 :ERROR   <col3 鸣器 is not in dictionary>
+line 25 :ERROR   <col4 鸣器 is not in dictionary>
+line 26 :NOTICE  <col3 cmmand word is different with col4>
+line 26 :ERROR   <col3 民器 is not in dictionary>
+line 26 :ERROR   <col4 鸣器 is not in dictionary>
+line 29 :NOTICE  <col3 cmmand word is different with col4>
+line 33 :NOTICE  <col3 cmmand word is different with col4>
+line 34 :NOTICE  <col3 cmmand word is different with col4>
+line 34 :ERROR   <col3 强卵 is not in dictionary>
+line 35 :NOTICE  <col3 cmmand word is different with col4>
+line 36 :NOTICE  <col3 cmmand word is different with col4>
+line 36 :ERROR   <col3 强栾 is not in dictionary>
+line 37 :NOTICE  <col3 cmmand word is different with col4>
+line 37 :ERROR   <col3 前栾 is not in dictionary>
+line 39 :NOTICE  <col3 cmmand word is different with col4>
+line 39 :ERROR   <col3 弱卵 is not in dictionary>
+line 40 :NOTICE  <col3 cmmand word is different with col4>
+line 40 :ERROR   <col3 弱栾 is not in dictionary>
+line 42 :NOTICE  <col3 cmmand word is different with col4>
+line 43 :NOTICE  <col3 cmmand word is different with col4>
+line 43 :ERROR   <col3 取栾 is not in dictionary>
+line 45 :NOTICE  <col3 cmmand word is different with col4>
+line 45 :ERROR   <col3 安兴 is not in dictionary>
+line 47 :NOTICE  <col3 cmmand word is different with col4>
+line 47 :ERROR   <col3 沐亿 is not in dictionary>
+line 51 :NOTICE  <col3 cmmand word is different with col4>
+line 53 :ERROR   <col3 人感 is not in dictionary>
+line 53 :ERROR   <col4 人感 is not in dictionary>
+line 54 :NOTICE  <col3 cmmand word is different with col4>
+line 54 :ERROR   <col3 忍感 is not in dictionary>
+line 54 :ERROR   <col4 人感 is not in dictionary>
+line 58 :NOTICE  <col3 cmmand word is different with col4>
+line 59 :ERROR   <col3 追人 is not in dictionary>
+line 59 :ERROR   <col4 追人 is not in dictionary>
+line 60 :NOTICE  <col3 cmmand word is different with col4>
+line 60 :ERROR   <col3 吹人 is not in dictionary>
+line 60 :ERROR   <col4 追人 is not in dictionary>
+line 61 :ERROR   <col3 避人 is not in dictionary>
+line 61 :ERROR   <col4 避人 is not in dictionary>
+line 63 :NOTICE  <col3 cmmand word is different with col4>
+line 66 :ERROR   <col3 柔风感 is not in dictionary>
+line 66 :ERROR   <col4 柔风感 is not in dictionary>
+line 70 :NOTICE  <col3 cmmand word is different with col4>
+line 71 :NOTICE  <col3 cmmand word is different with col4>
+line 71 :ERROR   <col3 崔风 is not in dictionary>
+line 72 :NOTICE  <col3 cmmand word is different with col4>
+line 72 :ERROR   <col3 崔分 is not in dictionary>
+line 73 :NOTICE  <col3 cmmand word is different with col4>
+line 74 :NOTICE  <col3 cmmand word is different with col4>
+line 76 :NOTICE  <col3 cmmand word is different with col4>
+line 82 :NOTICE  <col3 cmmand word is different with col4>
+line 84 :NOTICE  <col3 cmmand word is different with col4>
+line 88 :NOTICE  <col3 cmmand word is different with col4>
+line 90 :NOTICE  <col3 cmmand word is different with col4>
+line 92 :NOTICE  <col3 cmmand word is different with col4>
+line 105 :NOTICE  <col3 cmmand word is different with col4>
+line 105 :ERROR   <col3 恋度 is not in dictionary>
+line 106 :NOTICE  <col3 cmmand word is different with col4>
+line 106 :ERROR   <col3 梁度 is not in dictionary>
+line 111 :NOTICE  <col3 cmmand word is different with col4>
+line 111 :ERROR   <col3 额十 is not in dictionary>
+line 115 :NOTICE  <col3 cmmand word is different with col4>
+line 115 :ERROR   <col3 扶十 is not in dictionary>
+line 116 :NOTICE  <col3 cmmand word is different with col4>
+line 116 :ERROR   <col3 唔十 is not in dictionary>
+line 127 :NOTICE  <col3 cmmand word is different with col4>
+line 127 :ERROR   <col3 音梁 is not in dictionary>
+line 129 :NOTICE  <col3 cmmand word is different with col4>
+line 131 :NOTICE  <col3 cmmand word is different with col4>
+line 132 :NOTICE  <col3 cmmand word is different with col4>
+line 135 :NOTICE  <col3 cmmand word is different with col4>
+line 135 :ERROR   <col3 少一点儿 is not in dictionary>
+line 136 :NOTICE  <col3 cmmand word is different with col4>
+line 137 :NOTICE  <col3 cmmand word is different with col4>
+line 139 :NOTICE  <col3 cmmand word is different with col4>
+line 141 :NOTICE  <col3 cmmand word is different with col4>
+line 142 :NOTICE  <col3 cmmand word is different with col4>
+line 142 :ERROR   <col3 条少 is not in dictionary>
+line 143 :NOTICE  <col3 cmmand word is different with col4>
+line 145 :NOTICE  <col3 cmmand word is different with col4>
+line 147 :NOTICE  <col3 cmmand word is different with col4>
+line 151 :NOTICE  <col3 cmmand word is different with col4>
+line 153 :NOTICE  <col3 cmmand word is different with col4>
+line 156 :NOTICE  <col3 cmmand word is different with col4>
+line 158 :NOTICE  <col3 cmmand word is different with col4>
+line 162 :NOTICE  <col3 cmmand word is different with col4>
+line 164 :NOTICE  <col3 cmmand word is different with col4>
+line 164 :ERROR   <col3 色文 is not in dictionary>
+line 165 :NOTICE  <col3 cmmand word is different with col4>
+line 165 :ERROR   <col3 色翁 is not in dictionary>
+line 167 :NOTICE  <col3 cmmand word is different with col4>
+line 167 :ERROR   <col3 最嫩 is not in dictionary>
+line 169 :NOTICE  <col3 cmmand word is different with col4>
+line 169 :ERROR   <col3 最卵 is not in dictionary>
+line 170 :NOTICE  <col3 cmmand word is different with col4>
+line 170 :ERROR   <col3 最栾 is not in dictionary>
+line 173 :NOTICE  <col3 cmmand word is different with col4>
+line 174 :NOTICE  <col3 cmmand word is different with col4>
+line 176 :NOTICE  <col3 cmmand word is different with col4>
+line 177 :NOTICE  <col3 cmmand word is different with col4>
+line 179 :NOTICE  <col3 cmmand word is different with col4>
+line 181 :NOTICE  <col3 cmmand word is different with col4>
+line 183 :NOTICE  <col3 cmmand word is different with col4>
+line 183 :ERROR   <col3 嫩光 is not in dictionary>
+line 185 :NOTICE  <col3 cmmand word is different with col4>
+line 185 :ERROR   <col3 卵光 is not in dictionary>
+line 186 :NOTICE  <col3 cmmand word is different with col4>
+line 186 :ERROR   <col3 栾光 is not in dictionary>
+line 188 :NOTICE  <col3 cmmand word is different with col4>
+line 192 :NOTICE  <col3 cmmand word is different with col4>
+line 192 :ERROR   <col3 恋度 is not in dictionary>
+line 193 :NOTICE  <col3 cmmand word is different with col4>
+line 193 :ERROR   <col3 梁度 is not in dictionary>
+line 194 :NOTICE  <col3 cmmand word is different with col4>
+line 196 :NOTICE  <col3 cmmand word is different with col4>
+line 198 :NOTICE  <col3 cmmand word is different with col4>
+line 201 :NOTICE  <col3 cmmand word is different with col4>
+line 202 :NOTICE  <col3 cmmand word is different with col4>
+line 203 :NOTICE  <col3 cmmand word is different with col4>
+line 204 :NOTICE  <col3 cmmand word is different with col4>
+line 204 :ERROR   <col3 进怒 is not in dictionary>
+line 209 :NOTICE  <col3 cmmand word is different with col4>
+line 212 :NOTICE  <col3 cmmand word is different with col4>
+line 212 :ERROR   <col3 恋度 is not in dictionary>
+line 213 :NOTICE  <col3 cmmand word is different with col4>
+line 213 :ERROR   <col3 梁度 is not in dictionary>
+line 218 :ERROR   <col3 黑色光 is not in dictionary>
+line 218 :ERROR   <col4 黑色光 is not in dictionary>
+line 220 :ERROR   <col3 黑白光 is not in dictionary>
+line 220 :ERROR   <col4 黑白光 is not in dictionary>
+line 221 :ERROR   <col3 吹着 is not in dictionary>
+line 221 :ERROR   <col4 吹着 is not in dictionary>
+line 222 :NOTICE  <col3 cmmand word is different with col4>
+line 222 :ERROR   <col3 崔着 is not in dictionary>
+line 222 :ERROR   <col4 吹着 is not in dictionary>
+line 223 :ERROR   <col3 别吹 is not in dictionary>
+line 223 :ERROR   <col4 别吹 is not in dictionary>
+line 224 :NOTICE  <col3 cmmand word is different with col4>
+line 224 :ERROR   <col3 别崔 is not in dictionary>
+line 224 :ERROR   <col4 别吹 is not in dictionary>
+line 228 :NOTICE  <col3 cmmand word is different with col4>
+line 230 :NOTICE  <col3 cmmand word is different with col4>
+line 238 :NOTICE  <col3 cmmand word is different with col4>
+line 239 :NOTICE  <col3 cmmand word is different with col4>
+line 242 :NOTICE  <col3 cmmand word is different with col4>
+line 244 :NOTICE  <col3 cmmand word is different with col4>
+line 247 :NOTICE  <col3 cmmand word is different with col4>
+line 247 :ERROR   <col3 恋一 is not in dictionary>
+line 249 :NOTICE  <col3 cmmand word is different with col4>
+line 268 :NOTICE  <col3 cmmand word is different with col4>
+line 268 :ERROR   <col3 关逼 is not in dictionary>
+line 269 :NOTICE  <col3 cmmand word is different with col4>
+>>>>>>>>>>>>>>>
+
+二、有多个输出的词
+三、命令词错用为垃圾词
+四、没有结束节点的词
+五、所有节点回溯的命令词
+(以#为垃圾词，以%为没结束的词，其他为命令词)
+(第一列为输入，第二列为输出)
+(注：分词文件最后一行为空)
+小优小优 小优小优
+小优想优 小优小优
+想优小优 小优小优
+想优想优 小优小优
+小优小优 小优小优
+打开吹风 打开吹风
+打开吹烘 打开吹风
+打开追风 打开吹风
+打开喇叭 打开喇叭
+打开夜灯 打开夜灯
+打开灯 打开灯
+打开灯光 打开灯光
+打开灯具 打开灯光
+打开语音识别 打开语音识别
+打开静音模式 打开静音模式
+打开蜂鸣器 打开蜂鸣器
+打开分鸣器 打开蜂鸣器
+打开分民器 打开蜂鸣器
+打开小夜灯 打开小夜灯
+打开照明 打开照明
+打开赵敏 打开照明
+打开浴霸 打开浴霸
+打开换气 打开换气
+打开强暖 打开强暖
+打开前暖 打开强暖
+打开强卵 打开强暖
+打开前卵 打开强暖
+打开强栾 打开强暖
+打开前栾 打开强暖
+打开弱暖 打开弱暖
+打开弱卵 打开弱暖
+打开弱栾 打开弱暖
+打开取暖 打开取暖
+打开取卵 打开取暖
+打开取栾 打开取暖
+打开安心沐浴 打开安心沐浴
+打开安心沐亿 打开安心沐浴
+打开安兴沐浴 打开安心沐浴
+打开安兴沐亿 打开安心沐浴
+打开干燥 打开干燥
+打开干燥 打开干燥
+打开干操 打开干燥
+打开摆风 打开摆风
+打开人感 打开人感
+打开忍感 打开人感
+打开人体感应 打开人体感应
+打开风追人 打开风追人
+打开风吹人 打开风追人
+打开风避人 打开风避人
+打开分追人 打开风追人
+打开分吹人 打开风追人
+打开分避人 打开风避人
+打开内摆风 打开内摆风
+打开类摆风 打开内摆风
+打开外摆风 打开外摆风
+打开柔风感 打开柔风感
+打开柔风感 打开柔风感
+打开吹风 打开吹风
+打开吹分 打开吹风
+打开崔风 打开吹风
+打开崔分 打开吹风
+打开延时关 打开定时关
+打开延时关机 打开定时关
+打开延迟关 打开定时关
+打开延迟关机 打开定时关
+打开定时关 打开定时关
+打开屏显 打开屏显
+打开氛围灯 打开氛围灯
+打开麦克风 打开麦克风
+打开麦克风 打开麦克风
+打开麦克分 打开麦克风
+打开迈克风 打开麦克风
+打开迈克分 打开麦克风
+打开异味感应 打开异味感应
+打开智能除湿 打开智能除湿
+打开智能祛湿 打开智能除湿
+打开智能除思 打开智能除湿
+打开自能除湿 打开智能除湿
+打开自能祛湿 打开智能除湿
+打开自能除思 打开智能除湿
+打该吹风 打开吹风
+打该吹烘 打开吹风
+打该追风 打开吹风
+打该喇叭 打开喇叭
+打该夜灯 打开夜灯
+打该灯 打开灯
+打该灯光 打开灯光
+打该灯具 打开灯光
+打该语音识别 打开语音识别
+打该静音模式 打开静音模式
+打该蜂鸣器 打开蜂鸣器
+打该分鸣器 打开蜂鸣器
+打该分民器 打开蜂鸣器
+打该小夜灯 打开小夜灯
+打该照明 打开照明
+打该赵敏 打开照明
+打该浴霸 打开浴霸
+打该换气 打开换气
+打该强暖 打开强暖
+打该前暖 打开强暖
+打该强卵 打开强暖
+打该前卵 打开强暖
+打该强栾 打开强暖
+打该前栾 打开强暖
+打该弱暖 打开弱暖
+打该弱卵 打开弱暖
+打该弱栾 打开弱暖
+打该取暖 打开取暖
+打该取卵 打开取暖
+打该取栾 打开取暖
+打该安心沐浴 打开安心沐浴
+打该安心沐亿 打开安心沐浴
+打该安兴沐浴 打开安心沐浴
+打该安兴沐亿 打开安心沐浴
+打该干燥 打开干燥
+打该干燥 打开干燥
+打该干操 打开干燥
+打该摆风 打开摆风
+打该人感 打开人感
+打该忍感 打开人感
+打该人体感应 打开人体感应
+打该风追人 打开风追人
+打该风吹人 打开风追人
+打该风避人 打开风避人
+打该分追人 打开风追人
+打该分吹人 打开风追人
+打该分避人 打开风避人
+打该内摆风 打开内摆风
+打该类摆风 打开内摆风
+打该外摆风 打开外摆风
+打该柔风感 打开柔风感
+打该柔风感 打开柔风感
+打该吹风 打开吹风
+打该吹分 打开吹风
+打该崔风 打开吹风
+打该崔分 打开吹风
+打该延时关 打开定时关
+打该延时关机 打开定时关
+打该延迟关 打开定时关
+打该延迟关机 打开定时关
+打该定时关 打开定时关
+打该屏显 打开屏显
+打该氛围灯 打开氛围灯
+打该麦克风 打开麦克风
+打该麦克风 打开麦克风
+打该麦克分 打开麦克风
+打该迈克风 打开麦克风
+打该迈克分 打开麦克风
+打该异味感应 打开异味感应
+打该智能除湿 打开智能除湿
+打该智能祛湿 打开智能除湿
+打该智能除思 打开智能除湿
+打该自能除湿 打开智能除湿
+打该自能祛湿 打开智能除湿
+打该自能除思 打开智能除湿
+关闭吹风 关闭吹风
+关闭吹烘 关闭吹风
+关闭追风 关闭吹风
+关闭喇叭 关闭喇叭
+关闭夜灯 关闭夜灯
+关闭灯 关闭灯
+关闭灯光 关闭灯光
+关闭灯具 关闭灯光
+关闭语音识别 关闭语音识别
+关闭静音模式 关闭静音模式
+关闭蜂鸣器 关闭蜂鸣器
+关闭分鸣器 关闭蜂鸣器
+关闭分民器 关闭蜂鸣器
+关闭小夜灯 关闭小夜灯
+关闭照明 关闭照明
+关闭赵敏 关闭照明
+关闭浴霸 关闭浴霸
+关闭换气 关闭换气
+关闭强暖 关闭强暖
+关闭前暖 关闭强暖
+关闭强卵 关闭强暖
+关闭前卵 关闭强暖
+关闭强栾 关闭强暖
+关闭前栾 关闭强暖
+关闭弱暖 关闭弱暖
+关闭弱卵 关闭弱暖
+关闭弱栾 关闭弱暖
+关闭取暖 关闭取暖
+关闭取卵 关闭取暖
+关闭取栾 关闭取暖
+关闭安心沐浴 关闭安心沐浴
+关闭安心沐亿 关闭安心沐浴
+关闭安兴沐浴 关闭安心沐浴
+关闭安兴沐亿 关闭安心沐浴
+关闭干燥 关闭干燥
+关闭干燥 关闭干燥
+关闭干操 关闭干燥
+关闭摆风 关闭摆风
+关闭人感 关闭人感
+关闭忍感 关闭人感
+关闭人体感应 关闭人体感应
+关闭风追人 关闭风追人
+关闭风吹人 关闭风追人
+关闭风避人 关闭风避人
+关闭分追人 关闭风追人
+关闭分吹人 关闭风追人
+关闭分避人 关闭风避人
+关闭内摆风 关闭内摆风
+关闭类摆风 关闭内摆风
+关闭外摆风 关闭外摆风
+关闭柔风感 关闭柔风感
+关闭柔风感 关闭柔风感
+关闭吹风 关闭吹风
+关闭吹分 关闭吹风
+关闭崔风 关闭吹风
+关闭崔分 关闭吹风
+关闭延时关 关闭定时关
+关闭延时关机 关闭定时关
+关闭延迟关 关闭定时关
+关闭延迟关机 关闭定时关
+关闭定时关 关闭定时关
+关闭屏显 关闭屏显
+关闭氛围灯 关闭氛围灯
+关闭麦克风 关闭麦克风
+关闭麦克风 关闭麦克风
+关闭麦克分 关闭麦克风
+关闭迈克风 关闭麦克风
+关闭迈克分 关闭麦克风
+关闭异味感应 关闭异味感应
+关闭智能除湿 关闭智能除湿
+关闭智能祛湿 关闭智能除湿
+关闭智能除思 关闭智能除湿
+关闭自能除湿 关闭智能除湿
+关闭自能祛湿 关闭智能除湿
+关闭自能除思 关闭智能除湿
+光闭吹风 关闭吹风
+光闭吹烘 关闭吹风
+光闭追风 关闭吹风
+光闭喇叭 关闭喇叭
+光闭夜灯 关闭夜灯
+光闭灯 关闭灯
+光闭灯光 关闭灯光
+光闭灯具 关闭灯光
+光闭语音识别 关闭语音识别
+光闭静音模式 关闭静音模式
+光闭蜂鸣器 关闭蜂鸣器
+光闭分鸣器 关闭蜂鸣器
+光闭分民器 关闭蜂鸣器
+光闭小夜灯 关闭小夜灯
+光闭照明 关闭照明
+光闭赵敏 关闭照明
+光闭浴霸 关闭浴霸
+光闭换气 关闭换气
+光闭强暖 关闭强暖
+光闭前暖 关闭强暖
+光闭强卵 关闭强暖
+光闭前卵 关闭强暖
+光闭强栾 关闭强暖
+光闭前栾 关闭强暖
+光闭弱暖 关闭弱暖
+光闭弱卵 关闭弱暖
+光闭弱栾 关闭弱暖
+光闭取暖 关闭取暖
+光闭取卵 关闭取暖
+光闭取栾 关闭取暖
+光闭安心沐浴 关闭安心沐浴
+光闭安心沐亿 关闭安心沐浴
+光闭安兴沐浴 关闭安心沐浴
+光闭安兴沐亿 关闭安心沐浴
+光闭干燥 关闭干燥
+光闭干燥 关闭干燥
+光闭干操 关闭干燥
+光闭摆风 关闭摆风
+光闭人感 关闭人感
+光闭忍感 关闭人感
+光闭人体感应 关闭人体感应
+光闭风追人 关闭风追人
+光闭风吹人 关闭风追人
+光闭风避人 关闭风避人
+光闭分追人 关闭风追人
+光闭分吹人 关闭风追人
+光闭分避人 关闭风避人
+光闭内摆风 关闭内摆风
+光闭类摆风 关闭内摆风
+光闭外摆风 关闭外摆风
+光闭柔风感 关闭柔风感
+光闭柔风感 关闭柔风感
+光闭吹风 关闭吹风
+光闭吹分 关闭吹风
+光闭崔风 关闭吹风
+光闭崔分 关闭吹风
+光闭延时关 关闭定时关
+光闭延时关机 关闭定时关
+光闭延迟关 关闭定时关
+光闭延迟关机 关闭定时关
+光闭定时关 关闭定时关
+光闭屏显 关闭屏显
+光闭氛围灯 关闭氛围灯
+光闭麦克风 关闭麦克风
+光闭麦克风 关闭麦克风
+光闭麦克分 关闭麦克风
+光闭迈克风 关闭麦克风
+光闭迈克分 关闭麦克风
+光闭异味感应 关闭异味感应
+光闭智能除湿 关闭智能除湿
+光闭智能祛湿 关闭智能除湿
+光闭智能除思 关闭智能除湿
+光闭自能除湿 关闭智能除湿
+光闭自能祛湿 关闭智能除湿
+光闭自能除思 关闭智能除湿
+关逼吹风 关闭吹风
+关逼吹烘 关闭吹风
+关逼追风 关闭吹风
+关逼喇叭 关闭喇叭
+关逼夜灯 关闭夜灯
+关逼灯 关闭灯
+关逼灯光 关闭灯光
+关逼灯具 关闭灯光
+关逼语音识别 关闭语音识别
+关逼静音模式 关闭静音模式
+关逼蜂鸣器 关闭蜂鸣器
+关逼分鸣器 关闭蜂鸣器
+关逼分民器 关闭蜂鸣器
+关逼小夜灯 关闭小夜灯
+关逼照明 关闭照明
+关逼赵敏 关闭照明
+关逼浴霸 关闭浴霸
+关逼换气 关闭换气
+关逼强暖 关闭强暖
+关逼前暖 关闭强暖
+关逼强卵 关闭强暖
+关逼前卵 关闭强暖
+关逼强栾 关闭强暖
+关逼前栾 关闭强暖
+关逼弱暖 关闭弱暖
+关逼弱卵 关闭弱暖
+关逼弱栾 关闭弱暖
+关逼取暖 关闭取暖
+关逼取卵 关闭取暖
+关逼取栾 关闭取暖
+关逼安心沐浴 关闭安心沐浴
+关逼安心沐亿 关闭安心沐浴
+关逼安兴沐浴 关闭安心沐浴
+关逼安兴沐亿 关闭安心沐浴
+关逼干燥 关闭干燥
+关逼干燥 关闭干燥
+关逼干操 关闭干燥
+关逼摆风 关闭摆风
+关逼人感 关闭人感
+关逼忍感 关闭人感
+关逼人体感应 关闭人体感应
+关逼风追人 关闭风追人
+关逼风吹人 关闭风追人
+关逼风避人 关闭风避人
+关逼分追人 关闭风追人
+关逼分吹人 关闭风追人
+关逼分避人 关闭风避人
+关逼内摆风 关闭内摆风
+关逼类摆风 关闭内摆风
+关逼外摆风 关闭外摆风
+关逼柔风感 关闭柔风感
+关逼柔风感 关闭柔风感
+关逼吹风 关闭吹风
+关逼吹分 关闭吹风
+关逼崔风 关闭吹风
+关逼崔分 关闭吹风
+关逼延时关 关闭定时关
+关逼延时关机 关闭定时关
+关逼延迟关 关闭定时关
+关逼延迟关机 关闭定时关
+关逼定时关 关闭定时关
+关逼屏显 关闭屏显
+关逼氛围灯 关闭氛围灯
+关逼麦克风 关闭麦克风
+关逼麦克风 关闭麦克风
+关逼麦克分 关闭麦克风
+关逼迈克风 关闭麦克风
+关逼迈克分 关闭麦克风
+关逼异味感应 关闭异味感应
+关逼智能除湿 关闭智能除湿
+关逼智能祛湿 关闭智能除湿
+关逼智能除思 关闭智能除湿
+关逼自能除湿 关闭智能除湿
+关逼自能祛湿 关闭智能除湿
+关逼自能除思 关闭智能除湿
+亮度百分百 亮度百分百
+亮度百分之十 亮度百分之十
+亮度百分之二十 亮度百分之二十
+亮度百分之额十 亮度百分之二十
+亮度百分之三十 亮度百分之三十
+亮度百分之四十 亮度百分之四十
+亮度百分之五十 亮度百分之五十
+亮度百分之扶十 亮度百分之五十
+亮度百分之唔十 亮度百分之五十
+亮度百分之六十 亮度百分之六十
+亮度百分之七十 亮度百分之七十
+亮度百分之八十 亮度百分之八十
+亮度百分之九十 亮度百分之九十
+亮度百分之百 亮度百分之百
+亮度百分之一百 亮度百分之一百
+恋度百分百 亮度百分百
+恋度百分之十 亮度百分之十
+恋度百分之二十 亮度百分之二十
+恋度百分之额十 亮度百分之二十
+恋度百分之三十 亮度百分之三十
+恋度百分之四十 亮度百分之四十
+恋度百分之五十 亮度百分之五十
+恋度百分之扶十 亮度百分之五十
+恋度百分之唔十 亮度百分之五十
+恋度百分之六十 亮度百分之六十
+恋度百分之七十 亮度百分之七十
+恋度百分之八十 亮度百分之八十
+恋度百分之九十 亮度百分之九十
+恋度百分之百 亮度百分之百
+恋度百分之一百 亮度百分之一百
+梁度百分百 亮度百分百
+梁度百分之十 亮度百分之十
+梁度百分之二十 亮度百分之二十
+梁度百分之额十 亮度百分之二十
+梁度百分之三十 亮度百分之三十
+梁度百分之四十 亮度百分之四十
+梁度百分之五十 亮度百分之五十
+梁度百分之扶十 亮度百分之五十
+梁度百分之唔十 亮度百分之五十
+梁度百分之六十 亮度百分之六十
+梁度百分之七十 亮度百分之七十
+梁度百分之八十 亮度百分之八十
+梁度百分之九十 亮度百分之九十
+梁度百分之百 亮度百分之百
+梁度百分之一百 亮度百分之一百
+音量调小 音量调小
+音量条小 音量调小
+音量调大 音量调大
+音量条大 音量调大
+音量少一点 音量小一点
+音量小一点 音量小一点
+音量大一点 音量大一点
+音量少一点儿 音量小一点
+音量小一点儿 音量小一点
+音量大一点儿 音量大一点
+音量调小一点 音量调小一点
+音量调小一点儿 音量调小一点
+音量调少一点 音量调小一点
+音量调少一点儿 音量调小一点
+音量调大一点 音量调大一点
+音量调大一点儿 音量调大一点
+音量条小一点 音量调小一点
+音量条小一点儿 音量调小一点
+音量条少一点 音量调小一点
+音量条少一点儿 音量调小一点
+音量条大一点 音量调大一点
+音量条大一点儿 音量调大一点
+音量最大 音量最大
+音量最少 音量最小
+音量最小 音量最小
+音量一半 音量一半
+音量调到一半 音量调到一半
+音量调到一百 音量调到一半
+音量调到最小 音量调到最小
+音量调到最少 音量调到最小
+音量调到最大 音量调到最大
+音量条到一半 音量调到一半
+音量条到一百 音量调到一半
+音量条到最小 音量调到最小
+音量条到最少 音量调到最小
+音量条到最大 音量调到最大
+音量设为一半 音量设为一半
+音量设为一百 音量设为一半
+音量设为最小 音量设为最小
+音量设为最少 音量设为最小
+音量设为最大 音量设为最大
+音量涩为一半 音量设为一半
+音量涩为一百 音量设为一半
+音量涩为最小 音量设为最小
+音量涩为最少 音量设为最小
+音量涩为最大 音量设为最大
+音量调大 音量调大
+音量调小 音量调小
+音量调少 音量调小
+音梁调小 音量调小
+音梁条小 音量调小
+音梁调大 音量调大
+音梁条大 音量调大
+音梁少一点 音量小一点
+音梁小一点 音量小一点
+音梁大一点 音量大一点
+音梁少一点儿 音量小一点
+音梁小一点儿 音量小一点
+音梁大一点儿 音量大一点
+音梁调小一点 音量调小一点
+音梁调小一点儿 音量调小一点
+音梁调少一点 音量调小一点
+音梁调少一点儿 音量调小一点
+音梁调大一点 音量调大一点
+音梁调大一点儿 音量调大一点
+音梁条小一点 音量调小一点
+音梁条小一点儿 音量调小一点
+音梁条少一点 音量调小一点
+音梁条少一点儿 音量调小一点
+音梁条大一点 音量调大一点
+音梁条大一点儿 音量调大一点
+音梁最大 音量最大
+音梁最少 音量最小
+音梁最小 音量最小
+音梁一半 音量一半
+音梁调到一半 音量调到一半
+音梁调到一百 音量调到一半
+音梁调到最小 音量调到最小
+音梁调到最少 音量调到最小
+音梁调到最大 音量调到最大
+音梁条到一半 音量调到一半
+音梁条到一百 音量调到一半
+音梁条到最小 音量调到最小
+音梁条到最少 音量调到最小
+音梁条到最大 音量调到最大
+音梁设为一半 音量设为一半
+音梁设为一百 音量设为一半
+音梁设为最小 音量设为最小
+音梁设为最少 音量设为最小
+音梁设为最大 音量设为最大
+音梁涩为一半 音量设为一半
+音梁涩为一百 音量设为一半
+音梁涩为最小 音量设为最小
+音梁涩为最少 音量设为最小
+音梁涩为最大 音量设为最大
+音梁调大 音量调大
+音梁调小 音量调小
+音梁调少 音量调小
+色温最冷 色温最冷
+色温最嫩 色温最冷
+色温最暖 色温最暖
+色温最卵 色温最暖
+色温最栾 色温最暖
+色温暖一点 色温暖一点
+色温暖一点儿 色温暖一点
+色温卵一点 色温暖一点
+色温卵一点儿 色温暖一点
+色温栾一点 色温暖一点
+色温栾一点儿 色温暖一点
+色温冷一点 色温冷一点
+色温冷一点儿 色温冷一点
+色温棱一点 色温冷一点
+色温棱一点儿 色温冷一点
+色温乐一点 色温冷一点
+色温乐一点儿 色温冷一点
+色温调到冷光 色温调到冷光
+色温调到嫩光 色温调到冷光
+色温调到暖光 色温调到暖光
+色温调到卵光 色温调到暖光
+色温调到栾光 色温调到暖光
+色温调到中性光 色温调到中性光
+色温调到棕性光 色温调到中性光
+色温调到中性光 色温调到中性光
+色温条到冷光 色温调到冷光
+色温条到嫩光 色温调到冷光
+色温条到暖光 色温调到暖光
+色温条到卵光 色温调到暖光
+色温条到栾光 色温调到暖光
+色温条到中性光 色温调到中性光
+色温条到棕性光 色温调到中性光
+色温条到中性光 色温调到中性光
+色文最冷 色温最冷
+色文最嫩 色温最冷
+色文最暖 色温最暖
+色文最卵 色温最暖
+色文最栾 色温最暖
+色文暖一点 色温暖一点
+色文暖一点儿 色温暖一点
+色文卵一点 色温暖一点
+色文卵一点儿 色温暖一点
+色文栾一点 色温暖一点
+色文栾一点儿 色温暖一点
+色文冷一点 色温冷一点
+色文冷一点儿 色温冷一点
+色文棱一点 色温冷一点
+色文棱一点儿 色温冷一点
+色文乐一点 色温冷一点
+色文乐一点儿 色温冷一点
+色文调到冷光 色温调到冷光
+色文调到嫩光 色温调到冷光
+色文调到暖光 色温调到暖光
+色文调到卵光 色温调到暖光
+色文调到栾光 色温调到暖光
+色文调到中性光 色温调到中性光
+色文调到棕性光 色温调到中性光
+色文调到中性光 色温调到中性光
+色文条到冷光 色温调到冷光
+色文条到嫩光 色温调到冷光
+色文条到暖光 色温调到暖光
+色文条到卵光 色温调到暖光
+色文条到栾光 色温调到暖光
+色文条到中性光 色温调到中性光
+色文条到棕性光 色温调到中性光
+色文条到中性光 色温调到中性光
+色翁最冷 色温最冷
+色翁最嫩 色温最冷
+色翁最暖 色温最暖
+色翁最卵 色温最暖
+色翁最栾 色温最暖
+色翁暖一点 色温暖一点
+色翁暖一点儿 色温暖一点
+色翁卵一点 色温暖一点
+色翁卵一点儿 色温暖一点
+色翁栾一点 色温暖一点
+色翁栾一点儿 色温暖一点
+色翁冷一点 色温冷一点
+色翁冷一点儿 色温冷一点
+色翁棱一点 色温冷一点
+色翁棱一点儿 色温冷一点
+色翁乐一点 色温冷一点
+色翁乐一点儿 色温冷一点
+色翁调到冷光 色温调到冷光
+色翁调到嫩光 色温调到冷光
+色翁调到暖光 色温调到暖光
+色翁调到卵光 色温调到暖光
+色翁调到栾光 色温调到暖光
+色翁调到中性光 色温调到中性光
+色翁调到棕性光 色温调到中性光
+色翁调到中性光 色温调到中性光
+色翁条到冷光 色温调到冷光
+色翁条到嫩光 色温调到冷光
+色翁条到暖光 色温调到暖光
+色翁条到卵光 色温调到暖光
+色翁条到栾光 色温调到暖光
+色翁条到中性光 色温调到中性光
+色翁条到棕性光 色温调到中性光
+色翁条到中性光 色温调到中性光
+亮度调到最大 亮度调到最大
+亮度调到最少 亮度调到最小
+亮度调到最小 亮度调到最小
+亮度条到最大 亮度调到最大
+亮度条到最少 亮度调到最小
+亮度条到最小 亮度调到最小
+恋度调到最大 亮度调到最大
+恋度调到最少 亮度调到最小
+恋度调到最小 亮度调到最小
+恋度条到最大 亮度调到最大
+恋度条到最少 亮度调到最小
+恋度条到最小 亮度调到最小
+梁度调到最大 亮度调到最大
+梁度调到最少 亮度调到最小
+梁度调到最小 亮度调到最小
+梁度条到最大 亮度调到最大
+梁度条到最少 亮度调到最小
+梁度条到最小 亮度调到最小
+灯光调到最大 亮度调到最大
+灯光调到最少 亮度调到最小
+灯光调到最小 亮度调到最小
+灯光条到最大 亮度调到最大
+灯光条到最少 亮度调到最小
+灯光条到最小 亮度调到最小
+开启配网模式 开启配网模式
+开洗配网模式 开启配网模式
+进入配网模式 开启配网模式
+进路配网模式 开启配网模式
+进怒配网模式 开启配网模式
+最大音量 最大音量
+最大亮度 最大亮度
+最大恋度 最大亮度
+最大梁度 最大亮度
+最小音量 最小音量
+最小亮度 最小亮度
+最小恋度 最小亮度
+最小梁度 最小亮度
+最少音量 最小音量
+最少亮度 最小亮度
+最少恋度 最小亮度
+最少梁度 最小亮度
+打开白色光 打开白色光
+打开黄色光 打开黄色光
+打开自然光 打开自然光
+吹着我 吹着我
+崔着我 吹着我
+别吹我 别吹我
+别崔我 别吹我
+开灯 开灯
+开吹风 开吹风
+开夜灯 开夜灯
+开小夜灯 开小夜灯
+该灯 开灯
+该吹风 开吹风
+该夜灯 开夜灯
+该小夜灯 开小夜灯
+关灯 关灯
+关吹风 关吹风
+关夜灯 关夜灯
+关小夜灯 关小夜灯
+光灯 关灯
+光吹风 关吹风
+光夜灯 关夜灯
+光小夜灯 关小夜灯
+重启设备 重启设备
+确认备晚 确认配网
+暗一点 暗一点
+暗一点儿 暗一点
+亮一点 亮一点
+亮一点儿 亮一点
+恋一点 亮一点
+恋一点儿 亮一点
+暗一点 暗一点
+暗一点儿 暗一点
+亮一点 亮一点
+亮一点儿 亮一点
+恋一点 亮一点
+恋一点儿 亮一点
+太暗了 太暗了
+太亮了 太亮了
+打开等 打开等#
+打开瞪 打开瞪#
+打开电视 打开电视#
+打开手机 打开手机#
+打开洗衣机 打开洗衣机#
+打开风扇 打开风扇#
+打开窗 打开窗#
+打开锁 打开锁#
+打开空调 打开空调#
+打开设备 打开设备#
+打开电源 打开电源#
+打开风干 打开风干#
+打开自然风 打开自然风#
+打该等 打开等#
+打该瞪 打开瞪#
+打该电视 打开电视#
+打该手机 打开手机#
+打该洗衣机 打开洗衣机#
+打该风扇 打开风扇#
+打该窗 打开窗#
+打该锁 打开锁#
+打该空调 打开空调#
+打该设备 打开设备#
+打该电源 打开电源#
+打该风干 打开风干#
+打该自然风 打开自然风#
+关闭等 关闭等#
+关闭瞪 关闭瞪#
+关闭电视 关闭电视#
+关闭手机 关闭手机#
+关闭洗衣机 关闭洗衣机#
+关闭风扇 关闭风扇#
+关闭窗 关闭窗#
+关闭锁 关闭锁#
+关闭空调 关闭空调#
+关闭设备 关闭设备#
+关闭电源 关闭电源#
+关闭风干 关闭风干#
+关闭自然风 关闭自然风#
+光闭等 关闭等#
+光闭瞪 关闭瞪#
+光闭电视 关闭电视#
+光闭手机 关闭手机#
+光闭洗衣机 关闭洗衣机#
+光闭风扇 关闭风扇#
+光闭窗 关闭窗#
+光闭锁 关闭锁#
+光闭空调 关闭空调#
+光闭设备 关闭设备#
+光闭电源 关闭电源#
+光闭风干 关闭风干#
+光闭自然风 关闭自然风#
+关逼等 关闭等#
+关逼瞪 关闭瞪#
+关逼电视 关闭电视#
+关逼手机 关闭手机#
+关逼洗衣机 关闭洗衣机#
+关逼风扇 关闭风扇#
+关逼窗 关闭窗#
+关逼锁 关闭锁#
+关逼空调 关闭空调#
+关逼设备 关闭设备#
+关逼电源 关闭电源#
+关逼风干 关闭风干#
+关逼自然风 关闭自然风#
+亮度百分之一万 亮度百分之一万#
+亮度百分之一千 亮度百分之一千#
+亮度百分之一亿 亮度百分之一亿#
+恋度百分之一万 亮度百分之一万#
+恋度百分之一千 亮度百分之一千#
+恋度百分之一亿 亮度百分之一亿#
+梁度百分之一万 亮度百分之一万#
+梁度百分之一千 亮度百分之一千#
+梁度百分之一亿 亮度百分之一亿#
+色温最大 色温最大#
+色文最大 色温最大#
+色翁最大 色温最大#
+打开黑色光 打开黑色光#
+打开彩色光 打开彩色光#
+打开黑白光 打开黑白光#
+吹着他 吹着他#
+崔着他 吹着他#
+别吹他 别吹他#
+别崔他 别吹他#
+小度小度 小度小度#
+小红小红 小红小红#
+好久不见 好久不见#
+反应过来 反应过来#
+好心帮你 好心帮你#
+断水断电 断水断电#
+刚刚出去 刚刚出去#
+小红小红 小红小红#
+关闭白色光 关闭白色光#
+关闭黄色光 关闭黄色光#
+关闭自然光 关闭自然光#
+关逼白色光 关闭白色光#
+关逼黄色光 关闭黄色光#
+关逼自然光 关闭自然光#
+光闭白色光 关闭白色光#
+光闭黄色光 关闭黄色光#
+光闭自然光 关闭自然光#
+2022年 11月 14日 星期一 16:02:25 CST end
