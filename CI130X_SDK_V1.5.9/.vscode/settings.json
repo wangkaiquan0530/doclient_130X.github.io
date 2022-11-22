@@ -1,0 +1,13 @@
+{
+    "ci-tool.flag": "chipintelli-project",
+    "ci-tool.activated_project": "cwsl_track_socket",
+    "ci-tool.make_thread_number": "10",
+    "ci-tool.download-serial-port": "com5",
+    "files.associations": {
+        "buzzer_electric_control.h": "c",
+        "electric_control.h": "c",
+        "ci130x_gpio.h": "c",
+        "prompt_player.h": "c"
+    },
+    // "ci-tool.make_thread_number": "1",
+}
