@@ -1,0 +1,9 @@
+当唤醒词大于一个时，有以下两种应用方式：
+方式1、删除<1>wake_single、<2>wake_single、<3>wake_single...*wake_single，只保留<1>wake_multi 和 <0>cmd：
+优点：唤醒词在一个网络，代码逻辑修改比较简单，无需额外处理
+缺点：误唤醒较多
+注意：强烈建议不使用此方式
+
+方式2、删除<1>wake_multi，保留<1>wake_single、<2>wake_single、<3>wake_single...*wake_single 和 <0>cmd：
+优点：每个唤醒词为单一网络，误唤醒低
+缺点：代码需要注意修改逻辑

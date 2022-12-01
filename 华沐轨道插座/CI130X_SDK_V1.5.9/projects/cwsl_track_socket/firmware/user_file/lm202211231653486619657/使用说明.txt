@@ -1,0 +1,16 @@
+拷贝文件到SDK中
+
+如果您使用的是CI130X SDK，请按如下步骤将合成的文件拷贝到SDK中：
+1、拷贝 CmdWordStructure文件夹下的[60000]{cmd_info}.xls 到 CI130X_SDK\projects\offline_asr_sample\firmware\user_file\cmd_info文件夹下；
+2、拷贝 GfstCmd\[0]*.dat 文件到SDK的 CI130X_SDK\projects\offline_asr_sample\firmware\asr文件夹下；
+3、拷贝 GfstWake\[1]*.dat 文件到SDK的 CI130X_SDK\projects\offline_asr_sample\firmware\asr文件夹下。
+
+如果您使用的是CI11XX SDK，请按如下步骤将合成的文件拷贝到SDK中：
+1、拷贝 CmdWordStructure文件夹下的[60000]{cmd_info}.xls 到 CI11XX_SDK\sample\internal\sample_1122\firmware\user_file\cmd_info文件夹下；
+2、拷贝 GfstCmd\[0]*.dat 文件到SDK的 CI11XX_SDK\sample\internal\sample_1122\firmware\asr文件夹下；
+3、拷贝 GfstWake\[1]*.dat 文件到SDK的 CI11XX_SDK\sample\internal\sample_1122\firmware\asr文件夹下。
+
+如果您使用的是其他SDK，请按如下步骤将合成的文件拷贝到SDK中
+1、拷贝 CmdWordStructure文件夹下的[60000]{cmd_info}.xls 到 SDK的 ...\firmware\user_file\cmd_info文件夹下；
+2、拷贝 GfstCmd\[0]*.dat 文件到SDK的 ...\firmware\asr文件夹下；
+3、拷贝 GfstWake\[1]*.dat 文件到SDK的 ...\firmware\asr文件夹下。

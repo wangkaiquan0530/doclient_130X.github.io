@@ -1,0 +1,65 @@
+2022年 11月 29日 星期二 17:36:51 CST start
+分词检查包括分词格式检查、命令词多输出、命令词垃圾词混用和命令词回溯
+分词格式检查中有ERROR时，请修改，否则无法正常生成语言模型
+一、分词格式检查
+line 21 :ERROR   <col3 打开电影 is not in dictionary>
+line 21 :ERROR   <col4 打开电影 is not in dictionary>
+line 22 :ERROR   <col3 关闭电影 is not in dictionary>
+line 22 :ERROR   <col4 关闭电影 is not in dictionary>
+line 23 :ERROR   <col3 打开电压 is not in dictionary>
+line 23 :ERROR   <col4 打开电压 is not in dictionary>
+line 24 :ERROR   <col3 关闭电压 is not in dictionary>
+line 24 :ERROR   <col4 关闭电压 is not in dictionary>
+line 25 :ERROR   <col3 打开电容 is not in dictionary>
+line 25 :ERROR   <col4 打开电容 is not in dictionary>
+line 26 :ERROR   <col3 关闭电容 is not in dictionary>
+line 26 :ERROR   <col4 关闭电容 is not in dictionary>
+line 27 :ERROR   <col3 打开电驴 is not in dictionary>
+line 27 :ERROR   <col4 打开电驴 is not in dictionary>
+line 28 :ERROR   <col3 关闭电驴 is not in dictionary>
+line 28 :ERROR   <col4 关闭电驴 is not in dictionary>
+line 29 :ERROR   <col3 打开电缆 is not in dictionary>
+line 29 :ERROR   <col4 打开电缆 is not in dictionary>
+line 30 :ERROR   <col3 关闭电缆 is not in dictionary>
+line 30 :ERROR   <col4 关闭电缆 is not in dictionary>
+line 31 :ERROR   <col3 打开电量 is not in dictionary>
+line 31 :ERROR   <col4 打开电量 is not in dictionary>
+line 32 :ERROR   <col3 关闭电量 is not in dictionary>
+line 32 :ERROR   <col4 关闭电量 is not in dictionary>
+>>>>>>>>>>>>>>>
+
+二、有多个输出的词
+三、命令词错用为垃圾词
+四、没有结束节点的词
+五、所有节点回溯的命令词
+(以#为垃圾词，以%为没结束的词，其他为命令词)
+(第一列为输入，第二列为输出)
+学习关闭指令 学习关闭指令
+学习打开指令 学习打开指令
+删除关闭指令 删除关闭指令
+删除打开指令 删除打开指令
+来电常关 来电常关
+来电记忆 来电记忆
+来电常开 来电常开
+关闭电源 关闭电源
+打开电源 打开电源
+轨道插座 轨道插座
+马上就好 马上就好#
+麻烦你了 麻烦你了#
+买东西去 买东西去#
+没听明白 没听明白#
+关闭电灯 关闭电灯#
+打开电影 打开电影#
+关闭电影 关闭电影#
+打开电压 打开电压#
+关闭电压 关闭电压#
+打开电容 打开电容#
+关闭电容 关闭电容#
+打开电驴 打开电驴#
+关闭电驴 关闭电驴#
+打开电缆 打开电缆#
+关闭电缆 关闭电缆#
+打开电量 打开电量#
+关闭电量 关闭电量#
+买个西瓜 买个西瓜#
+2022年 11月 29日 星期二 17:36:53 CST end

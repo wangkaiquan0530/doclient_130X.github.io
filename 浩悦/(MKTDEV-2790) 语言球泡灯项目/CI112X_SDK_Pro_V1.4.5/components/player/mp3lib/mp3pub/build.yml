@@ -1,0 +1,7 @@
+Name: "mp3pub"
+
+
+Inc:
+    - mp3common.h
+    - mp3dec.h
+    - mp3statname.h

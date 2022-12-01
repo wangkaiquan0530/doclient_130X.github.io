@@ -1,0 +1,8 @@
+Name: "mp3lib"
+
+
+Group:
+    - mp3pub 
+
+Src:
+    - libmp3.a

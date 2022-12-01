@@ -1,0 +1,8 @@
+﻿# 设置平台参数
+set mem inaccessible-by-default off
+set arch riscv:rv32
+set remotetimeout 1000
+# 设置sever地址，如果是本地调试则使用localhost:3333
+target extended-remote 192.168.2.185:2331
+# halt cpu
+monitor halt

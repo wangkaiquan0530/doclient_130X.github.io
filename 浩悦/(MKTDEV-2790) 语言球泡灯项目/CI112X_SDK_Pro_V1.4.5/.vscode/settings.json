@@ -1,0 +1,5 @@
+{
+    "files.associations": {
+        "voice_module_uart_protocol.h": "c"
+    }
+}

@@ -1,0 +1,8 @@
+Name: "aaclib"
+
+
+Group:
+    - aacpub 
+
+Src:
+    - libaac.a
