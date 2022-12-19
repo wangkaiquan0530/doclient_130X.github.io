@@ -1,0 +1,13 @@
+{
+    "ci-tool.flag": "chipintelli-project",
+    "ci-tool.activated_project": "offline_asr_sample",
+    "ci-tool.make_thread_number": "10",
+    "files.associations": {
+        "romlib_runtime.h": "c",
+        "gas_alarm_uart_protocol.h": "c",
+        "sdk_default_config.h": "c",
+        "audio_play_api.h": "c"
+    },
+    "ci-tool.download-serial-port": "com5",
+    // "ci-tool.make_thread_number": "1",
+}
