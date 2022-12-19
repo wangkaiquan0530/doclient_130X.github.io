@@ -1,0 +1,7 @@
+拷贝文件到SDK中
+
+如果您使用的是CI130X SDK，请按如下步骤将合成的文件拷贝到SDK中：
+1、拷贝所有音频文件（*.wav）到 CI130X_SDK\projects\offline_asr_sample\firmware\voice\src文件夹下；
+
+如果您使用的是CI11XX SDK，请按如下步骤将合成的文件拷贝到SDK中：
+1、拷贝所有音频文件（*.wav） 到 CI11XX_SDK\sample\internal\sample_11XX\firmware\voice\[0]voice文件夹下；
